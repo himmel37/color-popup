@@ -10,6 +10,7 @@ const TRACKS = [
     type: "Title",
     color: "#7c6dfa",
     bg: "#0d0a1f",
+    lyric: "파스텔처럼 번져온 너의 Color",
     desc: "강렬한 신디사이저와 재지한 코드 진행. 자신만의 색깔로 세상을 물들이겠다는 당찬 선언.",
     mood: "Electric · Confident · Bold",
     spotify: "https://open.spotify.com/track/7BRP4zawz4T1PhAdj2Nr4Z",
@@ -20,8 +21,9 @@ const TRACKS = [
     num: "02",
     title: "Baby Blue",
     type: "",
-    color: "#85b7eb",
+    color: "#4ab8e8",
     bg: "#080f1a",
+    lyric: "달에 물어 너 어딘지 전해줄래",
     desc: "하늘빛처럼 맑고 청량한 곡. 설레는 감정을 파란 하늘에 담아낸다.",
     mood: "Dreamy · Soft · Fresh",
     spotify: "https://open.spotify.com/track/5Vhv7grrhFyhTYkXKrNo67",
@@ -34,6 +36,7 @@ const TRACKS = [
     type: "",
     color: "#4ecdc4",
     bg: "#08181a",
+    lyric: "이미 난 갇혔어, 너라는 섬에서",
     desc: "파도를 타듯 자유롭게. 여름의 에너지가 물결치는 업템포 트랙.",
     mood: "Free · Energetic · Summer",
     spotify: "https://open.spotify.com/track/0ONXDvqXoLojpLSRr2npja",
@@ -46,6 +49,7 @@ const TRACKS = [
     type: "",
     color: "#3db87a",
     bg: "#081a10",
+    lyric: "말해줘, 더 빨리 갈 Cheat code to your heart",
     desc: "게임 같은 인생에서 나만의 치트키. 몽환적이고 중독적인 멜로디.",
     mood: "Mysterious · Addictive · Cool",
     spotify: "https://open.spotify.com/track/0dE5yWQgpEMBtEiLqsKbL2",
@@ -56,8 +60,9 @@ const TRACKS = [
     num: "05",
     title: "Videohood",
     type: "",
-    color: "#d4537e",
+    color: "#e03030",
     bg: "#1a0808",
+    lyric: "I\'m a robot man 여기 접속해",
     desc: "비디오 속 세계처럼 아련하고 감성적인 미드템포 곡.",
     mood: "Nostalgic · Emotional · Cinematic",
     spotify: "https://open.spotify.com/track/348MxMVyHYOKA4XrHJEQAk",
@@ -70,6 +75,7 @@ const TRACKS = [
     type: "",
     color: "#f0b429",
     bg: "#1a1208",
+    lyric: "나보다 나를 더 잘 아는 너",
     desc: "위츄! 밝고 귀여운 에너지가 넘치는 곡. 함께하고 싶은 마음을 담았다.",
     mood: "Playful · Bright · Sweet",
     spotify: "https://open.spotify.com/track/37bG7biGfYaLebbXIuQbxK",
@@ -81,7 +87,8 @@ const TRACKS = [
     title: "고양이 릴스",
     type: "",
     color: "#e8609a",
-    bg: "#081a12",
+    bg: "#1a0810",
+    lyric: "같이 미소 지을 수 있게 고양이 릴스를 보낼게",
     desc: "귀여운 고양이처럼 사랑스럽고 중독적인 마지막 트랙.",
     mood: "Cute · Addictive · Cozy",
     spotify: "https://open.spotify.com/track/2lQVBSfjBVCvI245h4oJNi",
@@ -98,6 +105,57 @@ declare global {
     YT: any;
     onYouTubeIframeAPIReady: () => void;
   }
+}
+
+// Particles 함수 위에 추가
+const PARTICLES = [...Array(20)].map(() => ({
+  x: Math.random() * 100,
+  y: Math.random() * 100,
+  size: Math.random() * 4 + 2,
+  duration: Math.random() * 4 + 3,
+  delay: Math.random() * 3,
+  drift: (Math.random() - 0.5) * 60,
+}));
+
+function Particles({ color, visible }: { color: string; visible: boolean }) {
+  if (!visible) return null;
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        inset: 0,
+        pointerEvents: "none",
+        overflow: "hidden",
+      }}
+    >
+      {PARTICLES.map((p, i) => (
+        <div
+          key={i}
+          style={{
+            position: "absolute",
+            left: `${p.x}%`,
+            top: `${p.y}%`,
+            width: p.size,
+            height: p.size,
+            borderRadius: "50%",
+            background: color,
+            opacity: 0,
+            animation: `particle-float ${p.duration}s ${p.delay}s infinite ease-in-out`,
+            boxShadow: `0 0 ${p.size * 3}px ${color}`,
+          }}
+        />
+      ))}
+      <style>{`
+        @keyframes particle-float {
+          0% { opacity: 0; transform: translateY(0px); }
+          20% { opacity: 0.7; }
+          80% { opacity: 0.4; }
+          100% { opacity: 0; transform: translateY(-80px); }
+        }
+      `}</style>
+    </div>
+  );
 }
 
 function TrackSection({
@@ -136,6 +194,21 @@ function TrackSection({
         overflow: "hidden",
       }}
     >
+      {/* 파티클 */}
+      <Particles color={track.color} visible={visible} />
+
+      {/* 빛 번짐 */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          pointerEvents: "none",
+          background: `radial-gradient(ellipse at 70% 50%, ${track.color}20 0%, transparent 55%)`,
+          opacity: visible ? 1 : 0,
+          transition: "opacity 1s ease",
+        }}
+      />
+
       {/* 배경 트랙 넘버 */}
       <div
         style={{
@@ -234,10 +307,29 @@ function TrackSection({
           {track.mood}
         </p>
 
+        {/* 가사 한 줄 */}
+        <p
+          style={{
+            fontFamily: "var(--font-playfair)",
+            fontStyle: "italic",
+            fontSize: "clamp(18px, 2.5vw, 26px)",
+            color: "#fff",
+            opacity: visible ? 0.75 : 0,
+            transform: visible ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s",
+            marginBottom: 16,
+            lineHeight: 1.5,
+            borderLeft: `2px solid ${track.color}`,
+            paddingLeft: 16,
+          }}
+        >
+          {track.lyric}
+        </p>
+
         <p
           style={{
             fontSize: 16,
-            color: "rgba(255,255,255,0.5)",
+            color: "rgba(255,255,255,0.45)",
             lineHeight: 1.8,
             maxWidth: 480,
             marginBottom: 36,
