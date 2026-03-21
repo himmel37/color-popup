@@ -18,11 +18,18 @@ const BOOTHS = [
     available: true,
   },
   {
+    id: "arcade",
+    name: "Wish Jelly Runner",
+    desc: "젤리를 먹으며 달려라",
+    color: "#f0b429",
+    available: true,
+  },
+  {
     id: "gallery",
     name: "Gallery",
     desc: "앨범 컨셉 포토 & 스토리",
     color: "#e8609a",
-    available: false,
+    available: true,
   },
   {
     id: "giftshop",
