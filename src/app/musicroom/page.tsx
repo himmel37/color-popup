@@ -10,7 +10,15 @@ const TRACKS = [
     type: "Title",
     color: "#7c6dfa",
     bg: "#0d0a1f",
-    lyric: "파스텔처럼 번져온 너의 Color",
+    lyrics: [
+      "We stand up",
+      "천 개의 색깔을 외칠래",
+      "파스텔처럼 번져온 너의 Color",
+      "Bring out the color, 내 맘대로",
+      "Light it up, 우리 색으로",
+      "Shine the light, 나의 순간",
+      "기적은 우리 가까이 있잖아",
+    ],
     desc: "강렬한 신디사이저와 재지한 코드 진행. 자신만의 색깔로 세상을 물들이겠다는 당찬 선언.",
     mood: "Electric · Confident · Bold",
     spotify: "https://open.spotify.com/track/7BRP4zawz4T1PhAdj2Nr4Z",
@@ -23,7 +31,16 @@ const TRACKS = [
     type: "",
     color: "#4ab8e8",
     bg: "#080f1a",
-    lyric: "달에 물어 너 어딘지 전해줄래",
+    lyrics: [
+      "기억나니? 네 미소에 비친",
+      "별보다 반짝인 눈부시던 낮이",
+      "파도처럼 다시 날 안아",
+      "달에 물어 넌 어딘지",
+      "아침처럼 돌아올 걸 알아",
+      "You, you, my baby blue",
+      "채워줘 채워줘 내 맘",
+      "반짝이며 우린 만날 거야",
+    ],
     desc: "하늘빛처럼 맑고 청량한 곡. 설레는 감정을 파란 하늘에 담아낸다.",
     mood: "Dreamy · Soft · Fresh",
     spotify: "https://open.spotify.com/track/5Vhv7grrhFyhTYkXKrNo67",
@@ -36,7 +53,16 @@ const TRACKS = [
     type: "",
     color: "#4ecdc4",
     bg: "#08181a",
-    lyric: "이미 난 갇혔어, 너라는 섬에서",
+    lyrics: [
+      "레몬이 너무 셔, 한 쪽 눈을 찡그려",
+      "맡겨볼래 바람에, 넌 어때?",
+      "Surf surf 두 손 잡고",
+      "바다 위에서 춤을 춰 나의 Dancer",
+      "이미 난 갇혔어, 너라는 섬에서",
+      "둘만의 Wave",
+      "노을 위로 잡은 Hands",
+      "이대로 놓지 말아 줘",
+    ],
     desc: "파도를 타듯 자유롭게. 여름의 에너지가 물결치는 업템포 트랙.",
     mood: "Free · Energetic · Summer",
     spotify: "https://open.spotify.com/track/0ONXDvqXoLojpLSRr2npja",
@@ -49,7 +75,16 @@ const TRACKS = [
     type: "",
     color: "#3db87a",
     bg: "#081a10",
-    lyric: "말해줘, 더 빨리 갈 Cheat code to your heart",
+    lyrics: [
+      "Ain't no easy way out",
+      "얼마나 오래 헤매다닌 걸까?",
+      "어디로 가야 네게 닿을까?",
+      "말해줘, 더 빨리 갈 Cheat code to your heart",
+      "지고 싶지 않아 이 게임을",
+      "I'm loving the chase",
+      "네 마음에 가장 먼저 닿고 싶을 뿐",
+      "I'm loving the chase",
+    ],
     desc: "게임 같은 인생에서 나만의 치트키. 몽환적이고 중독적인 멜로디.",
     mood: "Mysterious · Addictive · Cool",
     spotify: "https://open.spotify.com/track/0dE5yWQgpEMBtEiLqsKbL2",
@@ -62,7 +97,15 @@ const TRACKS = [
     type: "",
     color: "#e03030",
     bg: "#1a0808",
-    lyric: "I\'m a robot man 여기 접속해",
+    lyrics: [
+      "I'm a robot man 여기 접속해",
+      "손대지마 Alt tab",
+      "처음 본 세계, 나는 계속 도망 전진",
+      "오늘 낮은 아마도 다른 색",
+      "네온색 밤을 원해 난",
+      "현실은 이제 이만",
+      "Live in the moon",
+    ],
     desc: "비디오 속 세계처럼 아련하고 감성적인 미드템포 곡.",
     mood: "Nostalgic · Emotional · Cinematic",
     spotify: "https://open.spotify.com/track/348MxMVyHYOKA4XrHJEQAk",
@@ -75,7 +118,15 @@ const TRACKS = [
     type: "",
     color: "#f0b429",
     bg: "#1a1208",
-    lyric: "나보다 나를 더 잘 아는 너",
+    lyrics: [
+      "With you, with you, with you",
+      "넌 나를 바꿔 전부",
+      "나보다 나를 더 잘 아는 너",
+      "다 주고 싶어, 너에게 내 모든 걸",
+      "변치 않을 이 순간 Forever",
+      "사랑이란 말 대신 눈을 맞춰",
+      "같이 써 내려가",
+    ],
     desc: "위츄! 밝고 귀여운 에너지가 넘치는 곡. 함께하고 싶은 마음을 담았다.",
     mood: "Playful · Bright · Sweet",
     spotify: "https://open.spotify.com/track/37bG7biGfYaLebbXIuQbxK",
@@ -88,7 +139,16 @@ const TRACKS = [
     type: "",
     color: "#e8609a",
     bg: "#1a0810",
-    lyric: "같이 미소 지을 수 있게 고양이 릴스를 보낼게",
+    lyrics: [
+      "네가 보내주는 고양이 릴스가 좋아",
+      "고르고 또 골라서 나름의 답장을 해",
+      "같이 미소 지을 수 있게",
+      "고양이 릴스를 보낼게",
+      "올라가는 입꼬리를 상상하는 네가 그려져",
+      "오늘 하루도 덕분에 빨리도 지났네",
+      "그거면 돼 난",
+      "같이 웃을 수 있음 그걸로 좋아",
+    ],
     desc: "귀여운 고양이처럼 사랑스럽고 중독적인 마지막 트랙.",
     mood: "Cute · Addictive · Cozy",
     spotify: "https://open.spotify.com/track/2lQVBSfjBVCvI245h4oJNi",
@@ -147,13 +207,19 @@ function Particles({ color, visible }: { color: string; visible: boolean }) {
         />
       ))}
       <style>{`
-        @keyframes particle-float {
-          0% { opacity: 0; transform: translateY(0px); }
-          20% { opacity: 0.7; }
-          80% { opacity: 0.4; }
-          100% { opacity: 0; transform: translateY(-80px); }
-        }
-      `}</style>
+  @keyframes particle-float {
+    0% { opacity: 0; transform: translateY(0px); }
+    20% { opacity: 0.7; }
+    80% { opacity: 0.4; }
+    100% { opacity: 0; transform: translateY(-80px); }
+  }
+  @keyframes lyric-fade {
+    0% { opacity: 0; transform: translateY(8px); }
+    15% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-8px); }
+  }
+`}</style>
     </div>
   );
 }
@@ -167,6 +233,18 @@ function TrackSection({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const [lyricIndex, setLyricIndex] = useState(0);
+
+  useEffect(() => {
+    if (!visible) {
+      const t = setTimeout(() => setLyricIndex(0), 0);
+      return () => clearTimeout(t);
+    }
+    const interval = setInterval(() => {
+      setLyricIndex((i) => (i + 1) % track.lyrics.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [visible, track.lyrics.length]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -307,24 +385,33 @@ function TrackSection({
           {track.mood}
         </p>
 
-        {/* 가사 한 줄 */}
-        <p
+        {/* 가사 롤링 */}
+        <div
           style={{
-            fontFamily: "var(--font-playfair)",
-            fontStyle: "italic",
-            fontSize: "clamp(18px, 2.5vw, 26px)",
-            color: "#fff",
-            opacity: visible ? 0.75 : 0,
-            transform: visible ? "translateY(0)" : "translateY(20px)",
-            transition: "opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s",
+            height: 48,
+            overflow: "hidden",
             marginBottom: 16,
-            lineHeight: 1.5,
-            borderLeft: `2px solid ${track.color}`,
-            paddingLeft: 16,
+            opacity: visible ? 1 : 0,
+            transition: "opacity 0.7s ease 0.25s",
           }}
         >
-          {track.lyric}
-        </p>
+          <p
+            key={lyricIndex}
+            style={{
+              fontFamily: "var(--font-playfair)",
+              fontStyle: "italic",
+              fontSize: "clamp(16px, 2vw, 22px)",
+              color: "#fff",
+              opacity: 0,
+              lineHeight: 1.5,
+              borderLeft: `2px solid ${track.color}`,
+              paddingLeft: 16,
+              animation: "lyric-fade 3s ease forwards",
+            }}
+          >
+            {track.lyrics[lyricIndex]}
+          </p>
+        </div>
 
         <p
           style={{
